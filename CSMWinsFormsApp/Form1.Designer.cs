@@ -1,4 +1,6 @@
-﻿namespace CMSWinsFormsApp
+﻿using System.Windows.Forms;
+
+namespace CMSWinsFormsApp
 {
     partial class Form1
     {

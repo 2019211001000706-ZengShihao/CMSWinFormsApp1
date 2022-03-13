@@ -1,3 +1,6 @@
+using System;
+using System.Windows.Forms;
+
 namespace CMSWinsFormsApp
 {
     public partial class Form1 : Form
@@ -36,8 +39,8 @@ namespace CMSWinsFormsApp
 
         private void jobDetailsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            JobDetailsForm jobDetailsForm = new JobDetailsForm(); 
-            jobDetailsForm.ShowDialog();
+            JobDetailsForm2 jobDetailsForm2 = new JobDetailsForm2(); 
+            jobDetailsForm2.ShowDialog();
         }
 
         private void reportsToolStripMenuItem_Click(object sender, EventArgs e)

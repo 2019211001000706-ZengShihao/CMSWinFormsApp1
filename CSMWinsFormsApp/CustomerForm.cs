@@ -72,12 +72,54 @@ namespace CMSWinsFormsApp
             {
                 errCustForm.SetError(textBox4, "");
             }
-            if (false == false)
+            if (flag == false)
                 return;
             else
             {
                 //数据库代码
+                sqlDataAdapter1.Update(customerDataSet11);
+                MessageBox.Show("DataBase updated.");
             }
+        }
+
+        private void btnEdit_Click(object sender, EventArgs e)
+        {
+            customerDataSet11.Clear();
+            sqlDataAdapter1.Fill(customerDataSet11);
+            CurrentPosition();
+        }
+
+        private void btnNext_Click(object sender, EventArgs e)
+        {
+            btnNext.BindingContext[customerDataSet11, "tblCustomer"].Position += 1;
+            CurrentPosition();
+        }
+
+        private void CurrentPosition()
+        {
+            int currentPosition, ctr;
+            ctr = this.BindingContext[customerDataSet11, "tblCustomer"].Count;
+            if(ctr == 0)
+            {
+                textBox5.Text = "No records";
+            }
+            else
+            {
+                currentPosition = this.BindingContext[customerDataSet11, "tblCustomer"].Position += 1;
+                textBox5.Text=currentPosition.ToString()+"of"+ctr.ToString();
+            }
+        }
+
+        private void btnPrevious_Click(object sender, EventArgs e)
+        {
+            btnPrevious.BindingContext[customerDataSet11, "tblCustomer"].Position -= 1;
+            CurrentPosition();
+        }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            customerDataSet11.Clear();
+
         }
     }
 }

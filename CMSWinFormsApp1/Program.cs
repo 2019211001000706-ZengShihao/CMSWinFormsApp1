@@ -1,4 +1,4 @@
-namespace CMSWinFormsApp1
+namespace CMSWinsFormsApp
 {
     internal static class Program
     {

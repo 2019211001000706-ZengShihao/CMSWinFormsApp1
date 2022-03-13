@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace CMSWinFormsApp1
+namespace CMSWinsFormsApp
 {
     public partial class WorkerForm : Form
     {
@@ -30,6 +30,11 @@ namespace CMSWinFormsApp1
         private void btnExit_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
